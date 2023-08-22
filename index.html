@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/css/final.css" rel="stylesheet" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>My Portfolio</title>
     <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -15,7 +17,7 @@
   </head>
   <body>
     <!-- header start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="navigasi bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
@@ -50,15 +52,15 @@
                 </li>
                 <li class="flex items-center pl-8 mt-2 lg:mt-0">
                   <div class="flex">
-                    <span class="mr-2 text-sm text-slate-500 ">light</span>
+                    <span class="mr-2 text-sm text-slate-500 dark:text-white">light</span>
                     <input type="checkbox" class="hidden" id="dark-toggle">
                     <label for="dark-toggle">
-                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                      <div class="wadah-toggle flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
                         <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
                       </div>
                     </label>
                     
-                    <span class="ml-2 text-sm text-slate-500 ">dark</span>
+                    <span class="ml-2 text-sm text-slate-500 dark:text-white">dark</span>
                   </div>
                 </li>
               </ul>
@@ -73,14 +75,14 @@
     <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Halo Semua ✌, Saya <span class="block font-bold text-dark text-4xl mt-1 dark:text-white lg:text-5xl">Fazda Julio Arzika</span></h1>
-            <h2 class="font-medium font-mono text-xl text-secondary mb-5 lg:text-3xl">Student & <span class="text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-teal-400 bg-clip-text">Web Developer</span></h2>
+          <div class="hero w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl" >Halo Semua ✌, Saya <span class="block font-bold text-dark text-4xl mt-1 dark:text-white lg:text-5xl">Fazda Julio Arzika</span></h1>
+            <h2 class="font-medium font-mono text-xl text-secondary mb-5 lg:text-3xl">Student & <span class="developer text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-teal-400 bg-clip-text"></span></h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Belajar web programming mudah dan menyenangkan bukan? <span class="text-dark font-semibold dark:text-white ">bukan!</span></p>
 
             <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi Saya</a>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="img-hero w-full self-end px-4 lg:w-1/2">
             <div class="mt-28 relative lg:mt-0 lg:right-0">
               <img src="dist/img/4.png" alt="Fazda Julio Arzika" class="max-w-full relative z-10 mx-auto" />
               <span class="absolute bottom-10 left-1/2 -translate-x-1/2 md:scale-125 dark:animate-pulse">
@@ -103,12 +105,12 @@
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
+          <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-down" data-aos-duration="1100">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
             <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white ">Ayo, Belajar web programming</h2>
             <p class="text-base font-medium  text-secondary max-w-xl lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi distinctio voluptates doloribus numquam, consequatur odit reiciendis?</p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div class="w-full px-4 lg:w-1/2" data-aos="fade-right" data-aos-duration="1100">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white ">Mari berteman</h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ab atque optio recusandae corrupti odit quae illum ea!</p>
             <div class="flex items-center dark:text-white ">
@@ -174,43 +176,43 @@
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="700">
             <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
             <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white ">Project Terbaru</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, odit sit. Perspiciatis quasi neque quibusdam provident cupiditate culpa corrupti laboriosam?</p>
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap mx-auto justify-center xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md hover:dark:shadow-teal-500 transition duration-300 overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-duration="800">
+            <div class="rounded-md shadow-md hover:shadow-slate-800 transition duration-300 overflow-hidden hover:dark:shadow-teal-500">
               <img src="dist/img/projects/1.png" alt="Blog Post" />
               <h3 class="font-semibold text-xl text-dark mt-5 mb-3 p-2 dark:text-white ">Pengelolaan Blog | Fazda Julio</h3>
               <p class="font-medium text-base text-secondary p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio provident saepe voluptates quasi quos dicta.</p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md hover:dark:shadow-teal-500 transition duration-300 overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-duration="800">
+            <div class="rounded-md shadow-md hover:shadow-slate-800 transition duration-300 overflow-hidden hover:dark:shadow-teal-500">
               <img src="dist/img/projects/2.png" alt="Dashboard Bengkel" />
               <h3 class="font-semibold text-xl text-dark mt-5 mb-3 p-2 dark:text-white ">Sistem Informasi Bengkel | Fazda Julio</h3>
               <p class="font-medium text-base text-secondary p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio provident saepe voluptates quasi quos dicta.</p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md hover:dark:shadow-teal-500 transition duration-300 overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-duration="800">
+            <div class="rounded-md shadow-md hover:shadow-slate-800 transition duration-300 overflow-hidden hover:dark:shadow-teal-500">
               <img src="dist/img/projects/3.png" alt="Landing Page" />
               <h3 class="font-semibold text-xl text-dark mt-5 mb-3 p-2 dark:text-white ">Landing Page | Fazda Julio</h3>
               <p class="font-medium text-base text-secondary p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio provident saepe voluptates quasi quos dicta.</p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md hover:dark:shadow-teal-500 transition duration-300 overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-duration="800">
+            <div class="rounded-md shadow-md hover:shadow-slate-800 transition duration-300 overflow-hidden hover:dark:shadow-teal-500">
               <img src="dist/img/projects/4.png" alt="Sistem Akademik" />
               <h3 class="font-semibold text-xl text-dark mt-5 mb-3 p-2 dark:text-white ">Sistem Akademik | Fazda Julio</h3>
               <p class="font-medium text-base text-secondary p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio provident saepe voluptates quasi quos dicta.</p>
             </div>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md hover:dark:shadow-teal-500 transition duration-300 overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-duration="800">
+            <div class="rounded-md shadow-md hover:shadow-slate-800 transition duration-300 overflow-hidden hover:dark:shadow-teal-500">
               <img src="dist/img/projects/5.png" alt="Wedding Web" />
               <h3 class="font-semibold text-xl text-dark mt-5 mb-3 p-2 dark:text-white ">Web Undangan Pernikahan | Fazda Julio</h3>
               <p class="font-medium text-base text-secondary p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio provident saepe voluptates quasi quos dicta.</p>
@@ -225,7 +227,7 @@
     <section id="clients" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
+          <div class="mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="700">
             <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
             <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Yang Pernah Bekerja sama</h2>
             <p class="font-medium text-md text-slate-400 md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. A veniam ad omnis.?</p>
@@ -233,16 +235,16 @@
         </div>
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
-            <a  class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a  class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" data-aos="flip-up" data-aos-duration="800">
               <img src="dist/img/clients/google.svg" alt="" />
             </a>
-            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" data-aos="flip-up" data-aos-duration="800">
               <img src="dist/img/clients/amazon.svg" alt="" />
             </a>
-            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" data-aos="flip-up" data-aos-duration="800">
               <img src="dist/img/clients/goto.svg" alt="" />
             </a>
-            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" data-aos="flip-up" data-aos-duration="800">
               <img src="dist/img/clients/tko.png" alt="" />
             </a>
           </div>
@@ -255,14 +257,14 @@
     <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
+          <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-duration="700">
             <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
             <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white ">Tulisan Terkini</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eum architecto id cupiditate!</p>
           </div>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3" data-aos="flip-left" data-aos-duration="800">
             <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800">
               <img src="https://source.unsplash.com/360x200?programming" alt="Programming" class="w-full" />
               <div class="py-8 px-6">
@@ -274,7 +276,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3" data-aos="flip-left" data-aos-duration="800">
             <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800">
               <img src="https://source.unsplash.com/360x200?coffee" alt="Coffee" class="w-full" />
               <div class="py-8 px-6">
@@ -286,7 +288,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3" data-aos="flip-left" data-aos-duration="800">
             <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800">
               <img src="https://source.unsplash.com/360x200?mechanical&keyboard" alt="Mechanical keyboard" class="w-full" />
               <div class="py-8 px-6">
@@ -306,7 +308,7 @@
     <!-- Contact Start  -->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
-        <div class="w-full px-4">
+        <div class="w-full px-4" data-aos="fade-down" data-aos-duration="700">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
             <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white ">Hubungi Kami</h2>
@@ -456,7 +458,24 @@
     >
     </a>
     <!-- back to top end -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.developer', { duration: 2, delay: 1.5, text: 'Web Developer' });
+        gsap.from('.hero', { duration: 1, y: -100, opacity: 0, ease: 'bounce' });  
+        gsap.from('.img-hero', { duration: 1, x: -100, opacity: 0 });  
 
+    </script>
     <script src="dist/js/script.js"></script>
+    
   </body>
 </html>

@@ -31,5 +31,8 @@ body {
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {
-  @apply translate-x-3
+  @apply translate-x-3 bg-primary
+}
+#dark-toggle:checked ~ label div.wadah-toggle {
+  @apply bg-white
 }

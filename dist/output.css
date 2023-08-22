@@ -584,8 +584,8 @@ video {
   position: relative;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.bottom-10 {
+  bottom: 2.5rem;
 }
 
 .bottom-4 {
@@ -610,18 +610,6 @@ video {
 
 .top-full {
   top: 100%;
-}
-
-.bottom-14 {
-  bottom: 3.5rem;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .z-10 {
@@ -1203,6 +1191,10 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -1257,6 +1249,13 @@ body {
 #dark-toggle:checked ~ label div.toggle-circle {
   --tw-translate-x: 0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+}
+
+#dark-toggle:checked ~ label div.wadah-toggle {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 @keyframes pulse {
@@ -1301,6 +1300,11 @@ body {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-slate-800:hover {
+  --tw-shadow-color: #1e293b;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:grayscale-0:hover {
@@ -1380,10 +1384,6 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:bottom-0 {
-    bottom: 0px;
-  }
-
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
